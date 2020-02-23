@@ -1,0 +1,19 @@
+.header-content {
+    position: relative;
+  
+    &__title {
+        text-align: center;
+        font-size: 3.75rem;
+        margin: 0 0 53px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    
+    .btn {
+        margin-right: 10px;
+        margin-right: 10px;
+    }
+  }
+}

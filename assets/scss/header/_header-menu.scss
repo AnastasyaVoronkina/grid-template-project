@@ -1,0 +1,20 @@
+.header-menu {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &__container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+   }
+}
+
+.header-content__container,
+.header-menu__container {
+  /* to do ... */
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+ }
