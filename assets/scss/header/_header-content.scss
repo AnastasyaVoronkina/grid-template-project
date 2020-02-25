@@ -1,10 +1,27 @@
 .header-content {
     position: relative;
+
+    &__container {
+        @extend %container;
+      }
   
     &__title {
         text-align: center;
-        font-size: 3.75rem;
-        margin: 0 0 53px;
+
+        @include lg-min {
+          font-size: 3.75rem;
+          margin: 0 0 53px;
+        }
+
+        @include lg-md {
+          font-size: 2.5rem;
+          margin: 0 0 43px;
+        }
+        
+        @include md {
+          font-size: 1.875rem;
+          margin: 0 0 43px;
+        }
     }
 
     &__buttons {
@@ -12,8 +29,8 @@
         justify-content: center;
     
     .btn {
-        margin-right: 10px;
-        margin-right: 10px;
+        margin-left: $gap / 2;
+        margin-right: $gap / 2;
     }
   }
 }
