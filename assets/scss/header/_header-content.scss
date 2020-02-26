@@ -25,12 +25,8 @@
     }
 
     &__buttons {
-        display: flex;
-        justify-content: center;
-    
-    .btn {
-        margin-left: $gap / 2;
-        margin-right: $gap / 2;
+      @extend %batton-container;
+      
+      flex-wrap: wrap;
     }
-  }
 }

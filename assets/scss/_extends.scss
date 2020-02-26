@@ -4,3 +4,22 @@
     padding-left: $gap;
     padding-right: $gap;
   }
+%batton-container {
+  display: flex;
+  justify-content: center;
+
+}
+%batton {
+  display: block;
+  min-height: 60px;
+  padding: 18px $gap;
+  text-align: center;
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+  transition: background-color 0.5s, border-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
