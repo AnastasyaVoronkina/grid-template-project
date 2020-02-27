@@ -482,7 +482,7 @@ template {
 
 .btn, .btn-accent {
   display: block;
-  min-height: 60px;
+  height: 60px;
   padding: 18px 20px;
   text-align: center;
   font-size: 1.125rem;
@@ -926,10 +926,17 @@ input:focus {
     padding: 10px 0;
   }
   .btn:not(:last-of-type) {
-    margin-right: 20px;
+    margin-bottom: 10px;
   }
   .btn-accent {
     width: 100%;
+  }
+  .header-content__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
   }
   .skills__container {
     grid-gap: 20px;
