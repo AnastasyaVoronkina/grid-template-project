@@ -523,6 +523,16 @@ h2 {
   line-height: 1.2em;
 }
 
+h3 {
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  color: #637588;
+}
+
+p {
+  color: #637588;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -840,6 +850,10 @@ input:focus {
 }
 
 @media (min-width: 992px) {
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 56px;
+  }
   .btn {
     min-width: 250px;
   }
@@ -857,6 +871,10 @@ input:focus {
 }
 
 @media (max-width: 991.8px) and (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 42px;
+  }
   .btn {
     font-size: 1rem;
     letter-spacing: 0.1em;
@@ -901,6 +919,10 @@ input:focus {
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 36px;
+  }
   .btn {
     font-size: 1rem;
     letter-spacing: 0.05em;
@@ -918,6 +940,11 @@ input:focus {
 }
 
 @media (max-width: 575.8px) {
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 36px;
+  }
   .btn {
     font-size: 1rem;
     letter-spacing: 0.05em;
