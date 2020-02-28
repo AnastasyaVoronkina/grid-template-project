@@ -52,3 +52,14 @@
   padding: 0;
   border: 0;
 }
+@mixin section-gap {
+  @include lg-min {
+    padding: ($gap * 5) 0;
+  }
+  @include lg-md {
+    padding: ($gap * 4) 0;
+  }
+  @include md {
+    padding: ($gap * 3) 0;
+  }
+}
