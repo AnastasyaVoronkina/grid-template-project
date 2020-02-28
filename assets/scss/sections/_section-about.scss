@@ -6,7 +6,7 @@
 
   &__container {
     display: flex;
-
+    justify-content: space-between;
     @extend %container;
 
     @include lg-min {
@@ -18,65 +18,88 @@
      @include md-sm {
       min-height: 240px;
     }
-
     @include sm {
       flex-direction: column;
     }
   }
 
   &__description {
-    // flex-grow: 1;
-    p {
+
     @include lg-min {
-      font-size: 1.125rem;
+      max-width: 930px;
+    }
+    @include lg-md {
+      max-width: 625px;
+    }
+    @include md-sm {
+      max-width: 410px;
+    }
+    @include sm {
+      width: 100%;
     }
 
-    p:first-of-type {
-      position: relative;
-    
-    &::after {
-      content: "";
-      background-color: rgba($color-gray, 0.1);
-      position: absolute;
-      top: 0;
-      width: 2px;
-      height: 200px;
-
+    p {
       @include lg-min {
-        right: (-$gap * 2.5);
+        font-size: 1.125rem;
       }
-      @include lg-md {
-        right: (-$gap);
-      }
-      @include md-sm {
-        right: (-$gap / 2);
-      }
-      @include sm {
-        display: none;
-      }
-    }
-  }
+        &:first-of-type {
+          position: relative;
+      
+          &::after {
+          content: '';
+            background-color: rgba($color-gray, 0.1);
+            width: 2px;
+            height: 200px;
+            position: absolute;
+            top: 0;
 
-    &:last-of-type {
-      margin: 0;
-    }
-  }
-}
-  &__img {
-    display: flex;
-    flex-basis: 0.33%;
-    align-content: center;
-    justify-items: center;
-      img {
-        max-width: 100%;
-        max-height: 480px;
-        margin-top: $gap;
-        object-fit: cover;
-
-        @include sm {
-          height: 465px;
-          width: 250px;
+          @include lg-min {
+            right: (-$gap * 2.5);
+          }
+          @include lg-md {
+            right: (-$gap);
+          }
+          @include md-sm {
+            right: (-$gap / 2);
+          }
+          @include sm {
+            display: none;
+          }
         }
       }
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-content: center;
+    justify-items: center;
+
+    @include lg-min {
+      padding: 0 $gap*2.5;    
+      }
+    @include lg-md {
+      padding: 0 ($gap / 2) 0 ($gap * 1.5);
+    }
+    @include md-sm {
+      padding: 0 ($gap / 2) 0 ($gap * 3);
+    }
+
+    img {
+      max-width: 250px;
+      max-height: 480px;
+      margin-top: $gap;
+      // object-fit: cover;
+      
+      @include sm {
+        display: block;
+        height: 465px;
+        width: 250px;
+      }
+    }
   }
 }

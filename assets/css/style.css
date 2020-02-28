@@ -845,19 +845,22 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.about__description p p:first-of-type {
+.about__description p:first-of-type {
   position: relative;
 }
 
-.about__description p p:first-of-type::after {
-  content: "";
+.about__description p:first-of-type::after {
+  content: '';
   background-color: rgba(99, 117, 136, 0.1);
-  position: absolute;
-  top: 0;
   width: 2px;
   height: 200px;
+  position: absolute;
+  top: 0;
 }
 
 .about__description p:last-of-type {
@@ -868,19 +871,15 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 0.33%;
-  flex-basis: 0.33%;
   -ms-flex-line-pack: center;
   align-content: center;
   justify-items: center;
 }
 
 .about__img img {
-  max-width: 100%;
+  max-width: 250px;
   max-height: 480px;
   margin-top: 20px;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 @media (min-width: 576px) {
@@ -932,11 +931,17 @@ input:focus {
   .about__container {
     min-height: 270px;
   }
+  .about__description {
+    max-width: 930px;
+  }
   .about__description p {
     font-size: 1.125rem;
   }
-  .about__description p p:first-of-type::after {
+  .about__description p:first-of-type::after {
     right: -50px;
+  }
+  .about__img {
+    padding: 0 50px;
   }
 }
 
@@ -969,8 +974,14 @@ input:focus {
   .about__container {
     min-height: 270px;
   }
-  .about__description p p:first-of-type::after {
+  .about__description {
+    max-width: 625px;
+  }
+  .about__description p:first-of-type::after {
     right: -20px;
+  }
+  .about__img {
+    padding: 0 10px 0 30px;
   }
 }
 
@@ -1025,8 +1036,14 @@ input:focus {
   .about__container {
     min-height: 240px;
   }
-  .about__description p p:first-of-type::after {
+  .about__description {
+    max-width: 410px;
+  }
+  .about__description p:first-of-type::after {
     right: -10px;
+  }
+  .about__img {
+    padding: 0 10px 0 60px;
   }
 }
 
@@ -1073,10 +1090,14 @@ input:focus {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .about__description p p:first-of-type::after {
+  .about__description {
+    width: 100%;
+  }
+  .about__description p:first-of-type::after {
     display: none;
   }
   .about__img img {
+    display: block;
     height: 465px;
     width: 250px;
   }
