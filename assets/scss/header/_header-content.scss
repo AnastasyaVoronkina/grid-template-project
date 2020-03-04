@@ -1,5 +1,5 @@
 .header-content {
-    position: relative;
+  position: relative;
 
     &__container {
         @extend %container;
@@ -23,12 +23,11 @@
           margin: 0 0 43px;
         }
     }
-
     &__buttons {
       @extend %batton-container;
       
       flex-wrap: wrap;
-
+      
       @include sm {
         flex-direction: column;
         text-align: center;

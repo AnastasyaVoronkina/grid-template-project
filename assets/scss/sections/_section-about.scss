@@ -1,5 +1,4 @@
 .about {
-  letter-spacing: 0.055em;
   background-color: $color-gray-light;
 
   @include section-gap;
@@ -7,6 +6,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    
     @extend %container;
 
     @include lg-min {
@@ -26,79 +26,121 @@
   &__description {
 
     @include lg-min {
-      max-width: 930px;
+      max-width: 936px;
+      h2 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        margin: 0 0 ($gap * 2.5);
+      }
     }
     @include lg-md {
       max-width: 625px;
+      h2 {
+        font-size: 2rem;
+        letter-spacing: 3.2px;
+        margin: 0 0 ($gap * 1.9);
+      }
     }
     @include md-sm {
       max-width: 410px;
+      h2 {
+        font-size: 1.5rem;
+        letter-spacing: 2.5px;
+        margin: 0 0 ($gap * 1.5);
+      }
     }
     @include sm {
       width: 100%;
+      h2 {
+        font-size: 1.5rem;
+        letter-spacing: 2.5px;
+        margin: 0 auto ($gap);
+      }
     }
-
     p {
       @include lg-min {
         font-size: 1.125rem;
+        letter-spacing: 0.9px;
+        line-height: 24px;
+        margin: $gap 0;
       }
-        &:first-of-type {
-          position: relative;
-      
-          &::after {
+      @include md {
+        font-size: 1rem;
+        letter-spacing: 0.8px;
+        line-height: 24px;
+        margin: $gap 0;
+      }
+  
+      &:first-of-type {
+        position: relative;
+
+        &::after {
           content: '';
-            background-color: rgba($color-gray, 0.1);
-            width: 2px;
-            height: 200px;
-            position: absolute;
-            top: 0;
+          background-color: rgba($color-gray, 0.25);
+          width: 1px;
+          height: 200px;
+          position: absolute;
+          top: 0;
 
           @include lg-min {
             right: (-$gap * 2.5);
           }
           @include lg-md {
-            right: (-$gap);
+            right: (-$gap * 1.5);
           }
           @include md-sm {
-            right: (-$gap / 2);
+            right: (-$gap * 1.1);
           }
           @include sm {
             display: none;
           }
         }
       }
+      &:nth-of-type(3) {
 
-      &:last-of-type {
-        margin: 0;
+        @include md-sm {
+          display: none;
+        }
+      }
+      &:nth-of-type(4) {
+  
+        @include lg {
+         display: none;
+        }
       }
     }
   }
-
   &__img {
-    display: flex;
-    align-content: center;
-    justify-items: center;
 
     @include lg-min {
-      padding: 0 $gap*2.5;    
-      }
+      padding: 0 0 ($gap * 2) ($gap * 4);    
+    }
     @include lg-md {
-      padding: 0 ($gap / 2) 0 ($gap * 1.5);
+      padding: 0 0 ($gap *1.5) ($gap * 1.25);
+      margin-top: (-$gap * 1.5);
     }
     @include md-sm {
-      padding: 0 ($gap / 2) 0 ($gap * 3);
+      padding: 0;
+      margin-top: (-$gap);
     }
+     @include sm {}
 
     img {
-      max-width: 250px;
-      max-height: 480px;
-      margin-top: $gap;
-      // object-fit: cover;
+      max-width: 271px;
+      max-height: 488px;
+      object-fit: cover;
+      // margin-top: $gap; хотя так было бы лутше
       
+      @include md-sm {
+        max-width: 236px;
+        max-height: 425px;
+      }
+
       @include sm {
         display: block;
         height: 465px;
         width: 250px;
+        margin: 0 auto;
       }
     }
   }
