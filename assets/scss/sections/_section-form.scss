@@ -1,0 +1,88 @@
+.section-form {
+    background-color: $color-primary;
+    padding: ($gap * 1.5) 0;
+
+    @include lg {
+        padding: $gap 0;
+      }
+    &_form {
+        @extend %container;
+
+        display: grid;
+        grid-gap: $gap / 2;
+
+        @include lg-min {
+            grid-template-columns: repeat(3, 1fr) ;
+            grid-template-areas: "a1 a2 a3";
+        }
+
+        @include lg-md {
+            grid-template-columns: repeat(3, 1fr) ;
+            grid-template-areas: "a1 a2 a3";
+        }
+        @include md-sm {
+            grid-template: 50% 50% / 1fr 1fr;
+            grid-template-areas:
+            "a1 a1"
+            "a2 a3";
+        }
+        @include sm {
+
+        }
+
+        &_item {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+            color: #ffffff;
+            width: 421px;
+            height: 60px;
+            background-color: $color-input;
+        
+            @include lg-md {
+                font-size: 16px;
+                letter-spacing: 1.6px;
+                line-height: 24px;
+                width: 302px;
+                height: 60px; 
+            }
+            @include md {
+                font-size: 18px;
+                letter-spacing: 1.8px;
+                line-height: 11px;
+                width: 352px;
+                height: 60px; 
+            }
+        }
+        
+        & input {
+            padding-left: ($gap * 1.5);
+        }
+        & button {
+            color: #c8cbd1;
+            background-color: #424a62;
+            border: 2px rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.25);
+            transition-property:  background-color, border-color;
+            transition-duration: 0.5s;
+        }
+        & button:hover {
+            background-color: $color-accent;
+            border-color: $color-light;
+        }
+
+        &:nth-child(1) {
+            grid-area: a1;
+            
+            @include md {
+                width: 100%;
+            }
+          }
+          &:nth-child(2) {
+            grid-area: a2;
+          }
+          &:nth-child(3) {
+            grid-area: a3;
+          }
+        
+    }
+
+}

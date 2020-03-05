@@ -91,7 +91,7 @@
           @include md-sm {
             right: (-$gap * 1.1);
           }
-          @include sm {
+          @media (max-width: 700px) {
             display: none;
           }
         }
