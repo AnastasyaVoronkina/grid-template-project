@@ -7,43 +7,40 @@
 
     @extend %container;
 
-    &_list-social {
+    &__list-social {
         display: grid;
-        align-items: center;
-        justify-content: center;
         grid-gap: $gap / 2;
-        grid-template-columns: repeat(5, 40px) minmax(240px, max-content);
-        // width: 240px;
-        height: 38px;
+        grid-template-columns: repeat(5, 40px);
+        padding: ($gap * 1.5);
+        position: relative;
 
         &::after {
             content: '';
             position: absolute;
             width: 77px;
-            height: 0px;
             border: 2px solid rgba(255, 255, 255, 0.1);
-            // background-color: $color-gray;
-            bottom: -30px;
+            bottom: -0px;
             left: 50%;
             transform: translateX(-50%);
         }
+    }
 
-        &_item {
-            // width: 40px;
+    &__list-social__item {
 
-            &_icon {
-            // letter-spacing: 8.28px;
-            // line-height: 20px;
-            font-size: 37px;
-            color: $color-light;
-            transition: color 0.5s;
+        &__icon {
+        letter-spacing: 8.28px;
+        line-height: 20px;
+        font-size: 36px;
+        font-weight: 400;
+        color: $color-light;
+        transition: color 0.5s;
 
-                &:hover {
-                    color: $color-accent;
-                }
+            &:hover {
+                color: $color-accent;
             }
         }
     }
+
     &__description {
         font-family: $font-main;
         font-size: $font-size;
