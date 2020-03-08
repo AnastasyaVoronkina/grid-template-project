@@ -9,13 +9,13 @@ const mqpacker = require('css-mqpacker');
 const sortCSSmq = require('sort-css-media-queries');
 
 const path = {
-  scssFolder: 'assets/scss/',
-  scssFiles: 'assets/scss/**/*.scss',
-  scssFile: 'assets/scss/style.scss',
-  cssFolder: 'assets/css/',
-  cssFile: 'asses/css/style.css',
-  htmlFiles: 'assets/*.html',
-  jsFiles: 'assets/js/**/*.js'
+  scssFolder: './assets/scss/',
+  scssFiles: './assets/scss/**/*.scss',
+  scssFile: './assets/scss/style.scss',
+  cssFolder: './assets/css/',
+  cssFile: './assets/css/style.css',
+  htmlFiles: './*.html',
+  jsFiles: './assets/js/**/*.js'
 };
 
 const plugins = [
@@ -62,7 +62,7 @@ function comb() {
 
 function syncInit() {
   browserSync({
-    server: {baseDir: 'assets/'},
+    server: {baseDir: './'},
     notify: false
   });
 }
