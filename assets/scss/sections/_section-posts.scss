@@ -111,9 +111,9 @@
 
         &:hover {
           color: $color-primary;
-          background-color: ($color-gray-light - #222222);
+          background-color: ($color-gray-light - #d5d5d5);
         }
-    
+
         &:nth-of-type(1) {
             grid-area: a1;
           }
