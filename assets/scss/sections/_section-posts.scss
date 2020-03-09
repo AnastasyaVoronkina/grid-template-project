@@ -1,6 +1,84 @@
 .posts {
-    @include section-gap;
+    // @include section-gap;
 
+    &__container {
+        display: grid;
+        grid-gap: $gap / 2;
+        
+        @extend %container;
 
+        @include lg-min {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+              "a1 a1 a2 a3"
+              "a4 a5 a6 a6";
+            }
+      
+          @include lg-md {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+              "a1 a1 a2"
+              "a3 a4 a4"
+              "a5 a5 a6";
+          }
+      
+          @include md-sm {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+              "a1 a2"
+              "a3 a4"
+              "a5 a6";
+          }
+          @include sm {
+            grid-gap: $gap;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+             "a1"
+             "a2"
+             "a3"
+             "a4"
+             "a5"
+             "a6";
+          }
+    }
+
+    &__headding {
+        color: #fff;
+    }
+
+    &__card {
+
+        &__img {
+
+        }
+        &__description {
+
+            &__title {
+
+            }
+            &__text {
+
+            }
+        }
+
+        &:nth-of-type(1) {
+            grid-area: a1;
+          }
+          &:nth-of-type(2) {
+            grid-area: a2;
+          }
+          &:nth-of-type(3) {
+            grid-area: a3;
+          }
+          &:nth-of-type(4) {
+            grid-area: a4;
+          }
+          &:nth-of-type(5) {
+            grid-area: a5;
+          }
+          &:nth-of-type(6) {
+            grid-area: a6;
+          }
+    }
 
 }
