@@ -5,8 +5,10 @@
     background-color: $color-primary;
     padding: ($gap * 2.5) 0 ($gap * 3);
 
-    @extend %container;
-
+    &__container {
+        @extend %container;
+      }
+  
     &__list-social {
         display: grid;
         grid-gap: $gap / 2;
@@ -49,8 +51,10 @@
         line-height: 20px;
         text-transform: uppercase;
         color: $color-light;
-        display: block;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
         padding: ($gap * 1.5) ($gap * 2.5) 0;
 
         span {

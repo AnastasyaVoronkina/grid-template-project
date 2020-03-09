@@ -48,8 +48,10 @@
        "a9";
     }
   } 
+  &__button {
+    @extend %batton-container;
+  }
 }
-
   .skill-item {
     min-height: calc(33vh - 12px);
     background-color: $color-primary;
