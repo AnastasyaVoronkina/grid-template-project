@@ -1,14 +1,40 @@
 .posts {
-    // @include section-gap;
+    @include section-gap;
 
     &__container {
-        display: grid;
-        grid-gap: $gap / 2;
-        
-        @extend %container;
+      @extend %container;
+    }
+    &__headding {
+
+      @include lg-min {
+        font-style: 40px;
+        letter-spacing: 4px;
+        line-height: 48px;
+        margin-bottom: ($gap * 2.5);
+      }
+
+      @include lg-md {
+        font-style: 32px;
+        letter-spacing: 3.2px;
+        line-height: 40px;
+        margin-bottom: ($gap * 1.5);
+      }
+
+      @include md {
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        line-height: 32px;
+        margin-bottom: ($gap / 2);
+      }
+    }
+  
+    &__card-holder {
+          display: grid;
+          grid-gap: $gap / 2;
+          margin-bottom: $gap;
 
         @include lg-min {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
               "a1 a1 a2 a3"
               "a4 a5 a6 a6";
@@ -40,27 +66,54 @@
              "a5"
              "a6";
           }
-    }
-
-    &__headding {
-        color: #fff;
-    }
+        }
 
     &__card {
+      min-height: 550px;
+      color: $color-gray;
+      background-color: $color-gray-light;
+      transition-property: background-color, color;
+      transition-duration: 0.5s;
 
-        &__img {
+      &__img {
+        height: 300px;
+        overflow: hidden;
 
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          object-position: center;
+          transition: transform 0.5s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
+      }
+
         &__description {
+          min-height: 250px;
+          padding: ($gap * 2.5) ($gap / 2) 0;
+          letter-spacing: 0.9px;
+          line-height: 20px;
 
             &__title {
-
+              font-family: $font-header;
+              font-size: 18px;
+              text-align: center;
             }
             &__text {
-
+              font-size: $font-size;
+              text-align: center;
             }
         }
 
+        &:hover {
+          color: $color-primary;
+          background-color: ($color-gray-light - #222222);
+        }
+    
         &:nth-of-type(1) {
             grid-area: a1;
           }
@@ -79,6 +132,9 @@
           &:nth-of-type(6) {
             grid-area: a6;
           }
+          
     }
-
+  &__button {
+    @extend %batton-container;
+  }
 }
