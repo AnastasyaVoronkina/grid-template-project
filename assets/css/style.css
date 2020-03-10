@@ -709,11 +709,6 @@ input:focus {
   text-align: center;
 }
 
-.header-content__buttons {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 .skills {
   padding: 10px 10px 40px;
 }
@@ -1466,13 +1461,6 @@ input:focus {
   .btn-accent {
     width: 100%;
   }
-  .header-content__buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
   .skills__container {
     grid-gap: 20px;
     grid-template-columns: 1fr;
@@ -1506,6 +1494,7 @@ input:focus {
     font-size: 18px;
     letter-spacing: 1.8px;
     line-height: 11px;
+    color: #ffffff;
     width: 100%;
     height: 60px;
     background-color: #38405a;

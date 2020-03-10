@@ -25,12 +25,5 @@
     }
     &__buttons {
       @extend %batton-container;
-      
-      flex-wrap: wrap;
-      
-      @include sm {
-        flex-direction: column;
-        text-align: center;
-      }
     }
 }
