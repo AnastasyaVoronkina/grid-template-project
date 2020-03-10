@@ -79,17 +79,25 @@
         }
         & input {
             padding-left: ($gap * 1.5);
-
             background-color: $color-input;
             border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.25);
             transition-property:  background-color, border-color;
             transition-duration: 0.5s;
 
+            &::placeholder {
+                transition: color 0.5s;
+                color: $color-gray;
+              }
+  
             &:focus {
                 background-color: #4C546B;
                 border-bottom-color: $color-light;
-    
+
+                &::placeholder {
+                    color: $color-light;
+                }
             }
+
         }
         & button {
             color: #c8cbd1;

@@ -568,7 +568,7 @@ input:focus {
   align-content: center;
 }
 
-.header-overley {
+.header-overlay {
   background-color: #2d3651;
   opacity: 0.8;
   position: absolute;
@@ -901,9 +901,60 @@ input:focus {
   transition-duration: 0.5s;
 }
 
+.section-form_form input::-webkit-input-placeholder {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #637588;
+}
+
+.section-form_form input::-moz-placeholder {
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #637588;
+}
+
+.section-form_form input:-ms-input-placeholder {
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #637588;
+}
+
+.section-form_form input::-ms-input-placeholder {
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #637588;
+}
+
+.section-form_form input::placeholder {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #637588;
+}
+
 .section-form_form input:focus {
   background-color: #4C546B;
   border-bottom-color: #ffffff;
+}
+
+.section-form_form input:focus::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.section-form_form input:focus::-moz-placeholder {
+  color: #ffffff;
+}
+
+.section-form_form input:focus:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.section-form_form input:focus::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.section-form_form input:focus::placeholder {
+  color: #ffffff;
 }
 
 .section-form_form button {
@@ -972,7 +1023,22 @@ input:focus {
 }
 
 .posts__card__description {
-  min-height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
   padding: 50px 10px 0;
   letter-spacing: 0.9px;
   line-height: 20px;
@@ -981,12 +1047,10 @@ input:focus {
 .posts__card__description__title {
   font-family: "Roboto Slab", serif;
   font-size: 18px;
-  text-align: center;
 }
 
 .posts__card__description__text {
   font-size: 16px;
-  text-align: center;
 }
 
 .posts__card:hover {

@@ -93,7 +93,12 @@
       }
 
         &__description {
-          min-height: 250px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          flex-shrink: 0;
+          justify-content: center;
+          text-align: center;
           padding: ($gap * 2.5) ($gap / 2) 0;
           letter-spacing: 0.9px;
           line-height: 20px;
@@ -101,17 +106,15 @@
             &__title {
               font-family: $font-header;
               font-size: 18px;
-              text-align: center;
             }
             &__text {
               font-size: $font-size;
-              text-align: center;
             }
         }
 
         &:hover {
           color: $color-primary;
-          background-color: ($color-gray-light - #d5d5d5);
+          background-color: ($color-gray-light - #222222);
         }
 
         &:nth-of-type(1) {
