@@ -1453,7 +1453,7 @@ input:focus {
     padding: 10px 0;
   }
   .btn:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-right: 10px;
   }
   .btn-accent {
     width: 100%;
