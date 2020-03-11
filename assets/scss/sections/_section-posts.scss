@@ -7,14 +7,14 @@
     &__headding {
 
       @include lg-min {
-        font-style: 40px;
+        font-size: 40px;
         letter-spacing: 4px;
         line-height: 48px;
         margin-bottom: ($gap * 2.5);
       }
 
       @include lg-md {
-        font-style: 32px;
+        font-size: 32px;
         letter-spacing: 3.2px;
         line-height: 40px;
         margin-bottom: ($gap * 1.5);
