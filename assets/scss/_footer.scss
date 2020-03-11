@@ -51,10 +51,7 @@
         line-height: 20px;
         text-transform: uppercase;
         color: $color-light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column;
+        text-align: center;
         padding: ($gap * 1.5) ($gap * 2.5) 0;
 
         span {
