@@ -30,7 +30,7 @@
   
     &__card-holder {
           display: grid;
-          grid-gap: $gap / 2;
+          grid-gap: $gap;
           margin-bottom: $gap;
 
         @include lg-min {

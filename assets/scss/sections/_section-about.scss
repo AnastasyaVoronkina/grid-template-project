@@ -70,10 +70,13 @@
         line-height: 24px;
         margin: $gap 0;
       }
-  
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
       &:first-of-type {
         position: relative;
-
         &::after {
           content: '';
           background-color: rgba($color-gray, 0.25);
