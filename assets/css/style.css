@@ -844,8 +844,10 @@ input:focus {
   justify-content: space-between;
 }
 
-.about__description p:last-of-type {
-  margin-bottom: 0;
+.about__description h2 {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  margin: 0 0 50px;
 }
 
 .about__description p:first-of-type {
@@ -859,6 +861,10 @@ input:focus {
   height: 200px;
   position: absolute;
   top: 0;
+}
+
+.about__description p:last-of-type {
+  margin-bottom: 0;
 }
 
 .about__img img {
@@ -1103,8 +1109,8 @@ input:focus {
 .footer__list-social::after {
   content: '';
   position: absolute;
-  width: 77px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  width: 76px;
+  border: 1px solid #637588;
   bottom: -0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1162,6 +1168,11 @@ input:focus {
   .skill-item__title {
     font-size: 1.25rem;
   }
+  .about__description p {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1184,29 +1195,16 @@ input:focus {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
   .about {
-    padding: 100px 0;
-  }
-  .about__container {
-    min-height: 270px;
+    padding: 0 0 67px;
   }
   .about__description {
-    max-width: 936px;
-  }
-  .about__description h2 {
-    font-size: 2.5rem;
-    letter-spacing: 4px;
-  }
-  .about__description p {
-    font-size: 1.125rem;
-    letter-spacing: 0.9px;
-    line-height: 24px;
-    margin: 20px 0;
+    padding: 100px 0 0;
   }
   .about__description p:first-of-type::after {
-    right: -50px;
+    right: -40px;
   }
   .about__img {
-    padding: 0 0 40px 80px;
+    padding: 100px 0 0 80px;
   }
   .section-form_form {
     grid-template-columns: repeat(3, 1fr);
@@ -1267,24 +1265,23 @@ input:focus {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
   .about {
-    padding: 80px 0;
-  }
-  .about__container {
-    min-height: 270px;
+    padding: 0 0 30px;
   }
   .about__description {
     max-width: 625px;
+    padding: 80px 0 0;
   }
-  .about__description h2 {
+  .about__description h2 h2 {
     font-size: 2rem;
     letter-spacing: 3.2px;
+    line-height: 40px;
+    margin: 0 0 34.8px;
   }
   .about__description p:first-of-type::after {
     right: -30px;
   }
   .about__img {
-    padding: 0 0 30px 25px;
-    margin-top: -30px;
+    padding: 50px 0 0 25px;
   }
   .section-form_form {
     grid-template-columns: repeat(3, 1fr);
@@ -1337,14 +1334,10 @@ input:focus {
   .skill-item__title {
     font-size: 1.125rem;
   }
-  .about {
-    padding: 60px 0;
-  }
   .about__description p {
     font-size: 1rem;
     letter-spacing: 0.8px;
     line-height: 24px;
-    margin: 20px 0;
   }
   .posts {
     padding: 60px 0;
@@ -1375,15 +1368,18 @@ input:focus {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
-  .about__container {
-    min-height: 240px;
+  .about {
+    padding: 0 0 20px;
   }
   .about__description {
     max-width: 410px;
+    padding: 60px 0 0;
   }
-  .about__description h2 {
+  .about__description h2 h2 {
     font-size: 1.5rem;
-    letter-spacing: 2.5px;
+    letter-spacing: 2.4px;
+    line-height: 32px;
+    margin: 0 0 25px;
   }
   .about__description p:first-of-type::after {
     right: -22px;
@@ -1392,8 +1388,7 @@ input:focus {
     display: none;
   }
   .about__img {
-    padding: 0;
-    margin-top: -20px;
+    padding: 36px 0;
   }
   .about__img img {
     max-width: 236px;
@@ -1448,6 +1443,9 @@ input:focus {
     grid-template-columns: 1fr;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
+  .about {
+    padding: 0 0 68px;
+  }
   .about__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1456,10 +1454,12 @@ input:focus {
   }
   .about__description {
     width: 100%;
+    padding: 57px 0 0;
   }
-  .about__description h2 {
+  .about__description h2 h2 {
     font-size: 1.5rem;
-    letter-spacing: 2.5px;
+    letter-spacing: 2.4px;
+    line-height: 32px;
     margin: 0 auto 20px;
   }
   .about__img img {

@@ -1,23 +1,24 @@
 .about {
   background-color: $color-gray-light;
 
-  @include section-gap;
-
-  &__container {
+  @include lg-min {
+    padding: 0 0 67px;
+  }
+  @include lg-md {
+    padding: 0 0 ($gap * 1.5);
+  }
+  @include md-sm {
+    padding: 0 0 $gap;
+  }
+  @include sm {
+    padding: 0 0 68px;
+  }
+    &__container {
     display: flex;
     justify-content: space-between;
     
     @extend %container;
 
-    @include lg-min {
-     min-height: 270px;
-    }
-    @include lg-md {
-      min-height: 270px;
-    }
-     @include md-sm {
-      min-height: 240px;
-    }
     @include sm {
       flex-direction: column;
     }
@@ -26,53 +27,63 @@
   &__description {
 
     @include lg-min {
-      max-width: 936px;
-      h2 {
-        font-size: 2.5rem;
-        letter-spacing: 4px;
-        // margin: 0 0 ($gap * 2.5);
-      }
+      padding: ($gap * 5) 0 0;
     }
+
     @include lg-md {
       max-width: 625px;
-      h2 {
-        font-size: 2rem;
-        letter-spacing: 3.2px;
-        // margin: 0 0 ($gap * 1.9);
-      }
+      padding: ($gap * 4) 0 0;
     }
+
     @include md-sm {
       max-width: 410px;
-      h2 {
-        font-size: 1.5rem;
-        letter-spacing: 2.5px;
-        // margin: 0 0 ($gap * 1.5);
-      }
+      padding: ($gap * 3) 0 0;
     }
     @include sm {
       width: 100%;
-      h2 {
-        font-size: 1.5rem;
-        letter-spacing: 2.5px;
-        margin: 0 auto ($gap);
+      padding: 57px 0 0;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      letter-spacing: 4px;
+      margin: 0 0 ($gap * 2.5);
+      
+      @include lg-md {
+        h2 {
+          font-size: 2rem;
+          letter-spacing: 3.2px;
+          line-height: 40px;
+          margin: 0 0 ($gap * 1.74);
+        }
+      }
+      @include md-sm {
+        h2 {
+          font-size: 1.5rem;
+          letter-spacing: 2.4px;
+          line-height: 32px;
+          margin: 0 0 ($gap * 1.25);
+        }
+      }
+      @include sm {
+        h2 {
+          font-size: 1.5rem;
+          letter-spacing: 2.4px;
+          line-height: 32px;
+          margin: 0 auto ($gap);
+        }
       }
     }
     p {
-      @include lg-min {
-        font-size: 1.125rem;
+      @include md-min {
+        font-size: 18px;
         letter-spacing: 0.9px;
         line-height: 24px;
-        margin: $gap 0;
       }
       @include md {
         font-size: 1rem;
         letter-spacing: 0.8px;
         line-height: 24px;
-        margin: $gap 0;
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
       }
 
       &:first-of-type {
@@ -87,7 +98,7 @@
           top: 0;
 
           @include lg-min {
-            right: (-$gap * 2.5);
+            right: (-$gap * 2);
           }
           @include lg-md {
             right: (-$gap * 1.5);
@@ -112,28 +123,27 @@
          display: none;
         }
       }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
   &__img {
 
     @include lg-min {
-      padding: 0 0 ($gap * 2) ($gap * 4);    
+      padding: ($gap * 5) 0 0 ($gap * 4);    
     }
     @include lg-md {
-      padding: 0 0 ($gap *1.5) ($gap * 1.25);
-      margin-top: (-$gap * 1.5);
+      padding: ($gap * 2.5) 0 0 ($gap * 1.25);
     }
     @include md-sm {
-      padding: 0;
-      margin-top: (-$gap);
+      padding: 36px 0;
     }
-     @include sm {}
 
     img {
       max-width: 271px;
       max-height: 488px;
       object-fit: cover;
-      // margin-top: $gap; хотя так было бы лутше
       
       @include md-sm {
         max-width: 236px;

@@ -19,8 +19,8 @@
         &::after {
             content: '';
             position: absolute;
-            width: 77px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            width: 76px;
+            border: 1px solid $color-gray;
             bottom: -0px;
             left: 50%;
             transform: translateX(-50%);
